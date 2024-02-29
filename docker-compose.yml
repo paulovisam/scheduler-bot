@@ -1,0 +1,11 @@
+version: '3'
+services:
+  bot-telegram:
+    image: img-bot-telegram
+    container_name: container-bot-telegram
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - ./.env
+    restart: always
